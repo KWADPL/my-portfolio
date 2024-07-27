@@ -1,17 +1,31 @@
-import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import imageToAdd from '../assets/images/415149329_24655624780717981_6942141693481990154_n.jpg';
 
-const About: React.FC = () => {
-    return(
-        <div id="about">
-        <Header />
-        <main>
-            <h1>About Me</h1>
-            <p>Just simple girl looking for job</p>
-        </main>
-        <Footer />
+const About = () => {
+  return (
+    <div id="about">
+      <Header />
+      <main className="about-content">
+        <div className="vintage-frame">
+          <h1>About Me</h1>
+          <p>
+            I am a graduate with a practical profile in the discipline of Technical Computer Science and Telecommunications,
+            specializing in Database Design and Analysis. I completed my studies at the Academy of Economics and Humanities in Warsaw.
+            I am open to new innovations, tasks, and enjoy learning new things. I program in JavaScript, CSS, HTML, and React.
+            I aspire to become a <strong>Junior Frontend Developer</strong> and aim to expand my competencies by learning the latest programming solutions and technologies,
+            as well as honing my existing skills. Personal development is important to me due to my own motivation and the desire to create solutions that make work easier.
+            In the future, I want to become a Frontend Developer. I am looking for a job or an internship as a junior front-end developer. My name is Karolina, and I am a young and energetic programmer.
+            I am glad you want to get to know me. Please take a look at my 
+          </p>
+          <img src={imageToAdd} alt="me" className="my-photo" />
+          <button className="cv-button"><a href='#'>CV</a></button>
         </div>
-    );
+      </main>
+      <Footer />
+    </div>
+  );
 };
+
 export default About;

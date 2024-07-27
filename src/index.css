@@ -1,61 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header, footer {
-    background-color: purple;
-    color: white;
-    padding: 1rem;
-  }
-  header nav{
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  header ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-  
-  }
-  
-  header a {
-    color: purple;
-    text-decoration: none;
-    background-color: pink;
-    border: 2px solid purple;
-    border-radius: 20%;
-    padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  header a:hover{
-    background-color: purple;
-    color: white;
-  }
-  
-  .project-card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-  }
-  
-  .project-card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
- 
-#mainPage{
-  text-align: center;
+  @apply m-0 p-0 box-border;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/211789a8d9cff1c230219f3c0ae31537.jpg");
+  background-position: center;
+  background-attachment: fixed;
 }
-#name{
-  text-align: center;
+
+header {
+  @apply w-full text-white py-4;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/vintage_pink_roses_tumblr-wallpaper-2560x960.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-footer{
+
+header nav {
+  @apply flex justify-center mx-2;
+}
+
+header ul {
+  @apply list-none flex space-x-4 p-0;
+}
+
+header a {
+  @apply text-black no-underline bg-vintage-pink mx-2 border border-white rounded-full py-2 px-4 transition duration-300 ease-in-out;
+}
+
+header a:hover {
+  @apply bg-white text-black;
+}
+
+#mainPage, #name {
+  @apply text-center;
+}
+
+.footer {
+  @apply text-center bg-vintage-pink text-black py-4 mt-auto;
+}
+
+.animated-text-wrapper {
+  margin-top: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.animated-text {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 20px;
+}
+
+.animated-text li span.typing {
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.25em;
+  animation: typing 2s steps(24), blink 0.3s step-end infinite alternate;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.vintage-frame {
+  @apply bg-white bg-opacity-70 p-8 rounded-lg shadow-lg mx-auto my-12 max-w-2xl;
+  border: 2px dashed #f4e1d2; /* Vintage pink border */
+  background-color: rgba(255, 211, 211, 0.567); /* Slightly transparent white background */
+  text-align: center; /* Center the text */
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.vintage-frame h1, .vintage-frame h2, .vintage-frame p {
+  @apply my-4;
+}
+
+.vintage-frame h1 {
+  @apply text-4xl font-bold mb-4;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.vintage-frame h2 {
+  @apply text-2xl font-semibold mb-2;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.vintage-frame p {
+  @apply mb-4 font-semibold;
+  animation: fadeInUp 2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vintage-frame img.my-photo {
+  @apply my-4 mx-auto rounded-full border-2;
+  max-width: 30%;
+  height: auto;
+  animation: fadeInUp 2.5s ease-in-out forwards;
+}
+
+#about main {
+  @apply flex justify-center items-center min-h-screen;
+}
+
+#about h1 {
+  @apply text-4xl font-bold mb-4 text-center;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+#about p {
+  @apply mb-4;
+  animation: fadeInUp 2s ease-in-out forwards;
+}
+
+#about button {
+  @apply bg-vintage-pink text-black py-2 px-4 rounded-full transition duration-300 ease-in-out;
+  animation: fadeInUp 2s ease-in-out forwards;
+}
+
+#about button:hover {
+  @apply bg-pink-500;
+}
+
+#about a {
+  @apply text-black no-underline;
 }
