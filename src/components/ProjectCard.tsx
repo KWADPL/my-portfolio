@@ -6,17 +6,14 @@ interface ProjectCardProps {
   imageUrl: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  title,
-  description,
-  imageUrl,
-}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl }) => {
   return (
-    <div className="project-name">
-      <img src={imageUrl} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <div className="project-card">
+      <img src={imageUrl} alt={title} className="project-image" />
+      <h2 className="project-title">{title}</h2>
+      <p className="project-description">{description}</p>
     </div>
   );
 };
+
 export default ProjectCard;

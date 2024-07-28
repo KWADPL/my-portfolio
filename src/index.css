@@ -3,16 +3,24 @@
 @tailwind utilities;
 
 body {
-  @apply m-0 p-0 box-border;
+  @apply m-0 p-0 box-border flex flex-col min-h-screen;
   font-family: Arial, sans-serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/211789a8d9cff1c230219f3c0ae31537.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./assets/images/211789a8d9cff1c230219f3c0ae31537.jpg');
   background-position: center;
   background-attachment: fixed;
 }
 
+#home,
+#about,
+#projects {
+  @apply flex flex-col min-h-screen;
+}
+
 header {
   @apply w-full text-white py-4;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/vintage_pink_roses_tumblr-wallpaper-2560x960.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./assets/images/vintage_pink_roses_tumblr-wallpaper-2560x960.jpg');
   background-size: cover;
   background-position: center;
   background-blend-mode: darken;
@@ -35,12 +43,12 @@ header a:hover {
   @apply bg-white text-black;
 }
 
-#mainPage, #name {
-  @apply text-center;
+main {
+  @apply flex-grow flex items-center justify-center;
 }
 
 .footer {
-  @apply text-center bg-vintage-pink text-black py-4 mt-auto;
+  @apply text-center bg-vintage-pink text-black py-4;
 }
 
 .animated-text-wrapper {
@@ -66,7 +74,9 @@ header a:hover {
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.25em;
-  animation: typing 2s steps(24), blink 0.3s step-end infinite alternate;
+  animation:
+    typing 2s steps(24),
+    blink 0.3s step-end infinite alternate;
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
@@ -74,19 +84,25 @@ header a:hover {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .vintage-frame {
   @apply bg-white bg-opacity-70 p-8 rounded-lg shadow-lg mx-auto my-12 max-w-2xl;
-  border: 2px dashed #f4e1d2; /* Vintage pink border */
-  background-color: rgba(255, 211, 211, 0.567); /* Slightly transparent white background */
-  text-align: center; /* Center the text */
+  border: 2px dashed #f4e1d2;
+  background-color: rgba(255, 211, 211, 0.567);
+  text-align: center;
   animation: fadeInUp 1s ease-in-out forwards;
 }
 
@@ -108,7 +124,6 @@ header a:hover {
   @apply mb-4 font-semibold;
   animation: fadeInUp 2s ease-in-out forwards;
 }
-
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -126,7 +141,6 @@ header a:hover {
   height: auto;
   animation: fadeInUp 2.5s ease-in-out forwards;
 }
-
 #about main {
   @apply flex justify-center items-center min-h-screen;
 }
@@ -138,12 +152,14 @@ header a:hover {
 
 #about p {
   @apply mb-4;
-  animation: fadeInUp 2s ease-in-out forwards;
 }
 
 #about button {
   @apply bg-vintage-pink text-black py-2 px-4 rounded-full transition duration-300 ease-in-out;
-  animation: fadeInUp 2s ease-in-out forwards;
+  
+}
+#about p strong{
+  color:rgb(122, 48, 110);
 }
 
 #about button:hover {
@@ -152,4 +168,50 @@ header a:hover {
 
 #about a {
   @apply text-black no-underline;
+}
+
+.projects-container {
+  @apply flex flex-col min-h-screen;
+  
+}
+
+.projects-main {
+  @apply flex-grow flex flex-col items-center p-4;
+}
+
+.projects-title {
+  @apply text-5xl font-bold mb-8 text-center text-vintage-pink p-4 rounded-md;
+   animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.projects-entry {
+  @apply text-xl text-center max-w-2xl mb-10 text-gray-900 bg-vintage-pink bg-opacity-70 p-4 rounded-md;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+
+.project-list {
+  @apply flex flex-wrap gap-6 justify-center;
+}
+
+.project-card {
+  @apply bg-vintage-pink bg-opacity-70 p-4 rounded-lg shadow-lg w-80 text-center;
+  border: 2px dashed #f4e1d2;
+ 
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-image {
+  @apply w-full h-auto rounded-lg mb-4;
+}
+
+.project-title {
+  @apply text-xl font-bold mb-2 text-gray-800;
+}
+
+.project-description {
+  @apply text-sm text-gray-800 text-left;
 }
