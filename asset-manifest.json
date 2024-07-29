@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.2537fe91.css",
-    "main.js": "/my-portfolio/static/js/main.c5aa028c.js",
+    "main.js": "/my-portfolio/static/js/main.84db10ec.js",
     "static/media/vintage_pink_roses_tumblr-wallpaper-2560x960.jpg": "/my-portfolio/static/media/vintage_pink_roses_tumblr-wallpaper-2560x960.554794ad6f255d99c469.jpg",
     "static/media/Project2-img.png": "/my-portfolio/static/media/Project2-img.229e126d4cd7915fbb67.png",
     "static/media/415149329___n.jpg": "/my-portfolio/static/media/415149329_24655624780717981_6942141693481990154_n.e9bb2d6c86771d87cc1d.jpg",
@@ -9,10 +9,10 @@
     "static/media/Project1-img1.png": "/my-portfolio/static/media/Project1-img1.90dcf78d9ac71ac87274.png",
     "index.html": "/my-portfolio/index.html",
     "main.2537fe91.css.map": "/my-portfolio/static/css/main.2537fe91.css.map",
-    "main.c5aa028c.js.map": "/my-portfolio/static/js/main.c5aa028c.js.map"
+    "main.84db10ec.js.map": "/my-portfolio/static/js/main.84db10ec.js.map"
   },
   "entrypoints": [
     "static/css/main.2537fe91.css",
-    "static/js/main.c5aa028c.js"
+    "static/js/main.84db10ec.js"
   ]
 }
