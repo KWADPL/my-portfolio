@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.9ebcd3e6.css",
+    "main.css": "/my-portfolio/static/css/main.3b09db15.css",
     "main.js": "/my-portfolio/static/js/main.a4482de5.js",
     "static/media/vintage_pink_roses_tumblr-wallpaper-2560x960.jpg": "/my-portfolio/static/media/vintage_pink_roses_tumblr-wallpaper-2560x960.554794ad6f255d99c469.jpg",
     "static/media/Project2-img.png": "/my-portfolio/static/media/Project2-img.229e126d4cd7915fbb67.png",
@@ -8,11 +8,11 @@
     "static/media/jpg": "/my-portfolio/static/media/211789a8d9cff1c230219f3c0ae31537.43e04dc74025918e42ff.jpg",
     "static/media/Project1-img1.png": "/my-portfolio/static/media/Project1-img1.90dcf78d9ac71ac87274.png",
     "index.html": "/my-portfolio/index.html",
-    "main.9ebcd3e6.css.map": "/my-portfolio/static/css/main.9ebcd3e6.css.map",
+    "main.3b09db15.css.map": "/my-portfolio/static/css/main.3b09db15.css.map",
     "main.a4482de5.js.map": "/my-portfolio/static/js/main.a4482de5.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ebcd3e6.css",
+    "static/css/main.3b09db15.css",
     "static/js/main.a4482de5.js"
   ]
 }
