@@ -5,7 +5,7 @@
 body {
   @apply m-0 p-0 box-border flex flex-col min-h-screen;
   font-family: Arial, sans-serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.778), rgba(0, 0, 0, 0.569)),
     url('./assets/images/211789a8d9cff1c230219f3c0ae31537.jpg');
   background-position: center;
   background-attachment: fixed;
@@ -275,23 +275,89 @@ main {
   background-color: #f08888; 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   header ul {
-    @apply flex-col space-y-1;
+    @apply flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
   }
   header a {
-    @apply py-1 px-2;
+    @apply flex items-center justify-center text-center;
+    margin: 0 2px;
+    padding: 3px;
   }
   .vintage-frame {
-    @apply p-2;
+    @apply p-4;
   }
   .projects-title {
-    @apply text-2xl;
+    @apply text-3xl;
   }
   .projects-entry {
-    @apply text-sm;
+    @apply text-base;
   }
   .project-card {
-    @apply w-full p-2;
+    @apply w-full p-3;
+  }
+  .project-image {
+    @apply w-full h-auto mb-2;
+  }
+  .project-title {
+    @apply text-lg mb-1;
+  }
+  .project-description {
+    @apply text-sm;
+  }
+  .name-label, .email-label, .message-label {
+    font-size: 0.875rem;
+  }
+  .form-input {
+    font-size: 0.875rem;
+  }
+  .submit-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .animated-text-wrapper {
+    @apply flex-col mt-4;
+  }
+  .animated-text li span.typing {
+    font-size: 0.875rem;
+  }
+  .footer {
+    @apply text-sm;
+  }
+  .vintage-frame h1 {
+    @apply text-2xl;
+  }
+  .vintage-frame h2 {
+    @apply text-xl;
+  }
+  .vintage-frame p {
+    @apply text-sm;
+  }
+  #about main, #contact main {
+    @apply flex-col text-center px-4;
+  }
+  #about button, #contact button {
+    @apply w-full;
+  }
+  header nav {
+    @apply flex-col items-center;
+  }
+  header ul {
+    @apply w-full space-y-1;
+  }
+  header a {
+    @apply w-full text-center;
+  }
+  .projects-main {
+    @apply px-4;
+  }
+  .projects-entry, .project-card {
+    @apply w-full;
+  }
+  .project-list {
+    @apply flex-col items-center space-y-4;
   }
 }

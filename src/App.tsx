@@ -7,15 +7,15 @@ import Contact from './pages/Contact';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/my-portfolio">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact/>} />
-        
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
 };
+
 export default App;

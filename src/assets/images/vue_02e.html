@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Recruitment task</title>
+    <meta name="robots" content="noindex">
+    <style type="text/css">
+    #task {
+        float: right; 
+        border-left: 1px solid #ccc; 
+        padding: 1em; 
+        margin: 1em;
+        white-space: pre; 
+        font-family: monospace;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="task">
+# Task
+
+1. Add form to create new expense
+2. Add filter form
+  a. date (by month)
+  b. category (multiple)
+  c. amount (range)
+3. Generate summary table (html) consistent with the template (see 'Desired result')
+  a. show '-' for days without expenses
+  b. replace '...' with missing days in month
+  c. replace 'total: X' with summarized data (per category, month etc.)
+  d. use only table, tr, th and td tags
+4. Other improvements (feel free to add other improvements)
+5. Please send us this file with your solutions
+
+## Hints
+
+yarn global add browser-sync<br>
+browser-sync --watch .
+
+
+## Example data
+
+```
+expenses = [
+    {"date": "2023-03-01", category: "food", "amount": 55 },
+    {"date": "2023-03-31", category: "food", "amount": 6 },
+    {"date": "2023-03-31", category: "fuel", "amount": 210.2 },
+    {"date": "2023-03-01", category: "food", "amount": 23 },
+    {"date": "2023-04-02", category: "food", "amount": 9 },
+]
+```
+
+## Desired result
+
++--------+-----------+--------------+
+| month  | category  |   expenses   |
+|        |   day     |              |
++--------+-----------+--------------+
+|2023-03 |             total: X     |
+|        +-----------+--------------+
+|        | food      | total: X     |
+|        +-----------+--------------+
+|        | 1         | 23, 55       |
+|        | 2         | -            |
+|        | ...       | ...          |
+|        | 31        | 6            |
+|        +-----------+--------------+
+|        | fuel      | total: X     |
+|        +-----------+--------------+
+|        | 1         | -            |
+|        | 2         | -            |
+|        | ...       | ...          |
+|        | 31        | 210.2        |
++--------+-----------+--------------+
+|2023-04 |             total: X     |
+|        +-----------+--------------+
+|        | food      | total: X     |
+|        +-----------+--------------+
+|        | 1         | -            |
+|        | 2         | 9            |
+|        | ...       | ...          |
+|        | 30        | -            |
++--------+-----------+--------------+
+
+
+        </div>
+
+    <div id="app">
+      <h2>Expenses list</h2>
+      <table border="1">
+        <tbody>
+          <tr v-for="expense, idx in expenses">
+            <td>{{idx + 1}}</td>
+            <td>{{expense.date}}</td>
+            <td>{{expense.category}}</td>
+            <td>{{expense.amount}}</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              Total: 
+            </td>
+            <td> {{total}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <script type="module">
+    import { createApp, reactive, computed } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+    createApp({
+      setup() {
+        const expenses = reactive(
+          [
+              {"date": "2023-03-01", category: "food", "amount": 55 },
+              {"date": "2023-03-31", category: "food", "amount": 6 },
+              {"date": "2023-03-31", category: "fuel", "amount": 210.2 },
+              {"date": "2023-03-01", category: "food", "amount": 23 },
+              {"date": "2023-04-02", category: "food", "amount": 9 },
+          ]
+        )
+        const total = computed(() => expenses.reduce((acc, i) => acc + i.amount, 0))
+        return {
+          expenses,
+          total
+        }
+
+      }
+    }).mount('#app')
+    </script>
+
+
+  </body>
+</html>

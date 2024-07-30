@@ -21,7 +21,7 @@ const About = () => {
           </p>
           <img src={imageToAdd} alt="me" className="my-photo my-4 mx-auto rounded-full border-2" />
           <button className="bg-vintage-pink text-black py-2 px-4 rounded-full transition duration-300 ease-in-out hover:bg-pink-500">
-            <a href='#' className="text-black no-underline">CV</a>
+            <a href='https://drive.google.com/file/d/1jCd6TKixXvaKIjMOh2aJ9pBcJRLpQSto/view?usp=sharing' className="text-black no-underline">CV</a>
           </button>
         </div>
       </main>

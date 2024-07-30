@@ -36,15 +36,11 @@ const Projects = () => {
       - **Product Catalog:** Browse a wide range of products with detailed descriptions and high-quality images.
       - **Shopping Cart:** Add products to the shopping cart and manage quantities.
       - **User Authentication:** Secure user registration and login system.
-      - **Payment Gateway Integration:** Secure payment processing using popular payment gateways.
-      - **Order Management:** Track orders and view order history.
 
       Technologies used:
-      - **React:** For building the dynamic and responsive UI.
       - **Node.js and Express:** For the backend server.
       - **MongoDB:** For the database to store user and order data.
-      - **Redux:** For state management.
-      - **Stripe:** For payment processing.
+    
 
       You can find the source code for this project on [GitHub](https://github.com/KwadPL/online-shopping-website).
     `,
