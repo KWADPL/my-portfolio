@@ -1,30 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faStar, faCode, faCircleInfo } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faStar, faCode, faCircleInfo, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const Header = () => {
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(prevState => !prevState);
+  };
+
   return (
     <header>
-      <nav>
-        <ul>
+      <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
+        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        </button>
+        <ul className={`menu-list ${isMenuOpen ? 'show' : ''}`}>
           <li>
-            <Link to="/">
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
               <FontAwesomeIcon icon={faHouse} /> Home
             </Link>
           </li>
           <li>
-            <Link to="/about">
+            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
               <FontAwesomeIcon icon={faStar} /> About Me
             </Link>
           </li>
           <li>
-            <Link to="/projects">
+            <Link to="/projects" onClick={() => setIsMenuOpen(false)}>
               <FontAwesomeIcon icon={faCode} /> Projects
             </Link>
           </li>
-          <li><Link to="/contact">
-          <FontAwesomeIcon icon={faCircleInfo} /> Contact </Link> 
+          <li>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <FontAwesomeIcon icon={faCircleInfo} /> Contact
+            </Link>
           </li>
         </ul>
       </nav>

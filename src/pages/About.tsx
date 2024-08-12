@@ -20,7 +20,7 @@ const About = () => {
             I am glad you want to get to know me. Please take a look at my 
           </p>
           <img src={imageToAdd} alt="me" className="my-photo my-4 mx-auto rounded-full border-2" />
-          <button className="bg-vintage-pink text-black py-2 px-4 rounded-full transition duration-300 ease-in-out hover:bg-pink-500">
+          <button >
             <a href='https://drive.google.com/file/d/1jCd6TKixXvaKIjMOh2aJ9pBcJRLpQSto/view?usp=sharing' className="text-black no-underline">CV</a>
           </button>
         </div>

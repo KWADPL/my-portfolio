@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import ProjectCard from '../components/ProjectCard';
 import imageToAdd from '../assets/images/Project1-img1.png';
 import imageToAdd2 from '../assets/images/Project2-img.png';
+import imageToAdd3 from '../assets/images/project3.png';
 
 const Projects = () => {
   const projectList = [
@@ -45,6 +46,28 @@ const Projects = () => {
       You can find the source code for this project on [GitHub](https://github.com/KwadPL/online-shopping-website).
     `,
       imageUrl: imageToAdd2,
+    },
+    {
+      title: 'Discord Clone',
+      description: `
+        This project is a full stack application built using Typescript (TSX) and React. The key features include:
+        - **API Integration:** Fetches data from API to ensure accurate and up-to-date information.
+        - **Responsive UI:** Designed with a simple and intuitive user interface.
+        - **Backend with MongoDB, Docker, and GraphQL** :  Utilizes modern backend technologies for efficient data handling and deployment.
+
+
+        Technologies used:
+        - **React:** For building the dynamic and responsive UI.
+        - **TSX:** For writing React components.
+        - **Tailswind CSS and styled-components:** For custom styling.
+        - **API:** To fetch and post data.
+        - **Craco** to override the default configuration of a project created with Create React App (CRA).
+        And many more dependencies you can find in package
+        
+
+        You can find the source code for this project on [GitHub](https://github.com/KWADPL/discord-clone-frontend-master / https://github.com/KWADPL/discord-clone-backend-master).
+      `,
+      imageUrl: imageToAdd3,
     },
   ];
 
